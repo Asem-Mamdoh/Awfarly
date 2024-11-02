@@ -1,0 +1,523 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main-color: #007bff;
+  --hover-color: #432f8e;
+  --main-text: #333333;
+  --second-color: #707070;
+}
+
+body {
+  font-family: "cairo";
+}
+
+::selection {
+  background-color: #ffffff;
+  color: var(--main-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ======================= */
+/* Nav Bar */
+
+header {
+  box-shadow: 0 1px 5px 0 #007bff80;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+nav .logo {
+  width: 150px;
+}
+
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  align-items: center;
+}
+
+nav ul li {
+  padding: 13px;
+  cursor: pointer;
+}
+nav ul li a {
+  color: #333333;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+nav .input {
+  display: flex;
+  align-items: center;
+}
+
+nav input {
+  max-width: 150px;
+  padding: 7px;
+  border-radius: 8px;
+  border: 1px solid var(--second-color);
+  direction: rtl;
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.search {
+  background-color: #eee;
+  width: 26px;
+  height: 26px;
+  padding: 5px 0px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.search i {
+  display: flex;
+  justify-content: center;
+  color: var(--main-text);
+}
+
+.drop-list {
+  display: flex;
+  flex-flow: column wrap;
+  border-radius: 8px;
+  text-align: end;
+}
+.drop-list li {
+  display: none;
+  border-bottom: 4px solid var(--main-color);
+  border-radius: 8px;
+  width: 100%;
+}
+
+.drop-list li:hover {
+  background-color: #00ff3c;
+}
+
+/* ======================= */
+/* Heroo Section */
+
+.hero {
+  width: 90%;
+  margin: auto;
+  padding-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  height: 90vh;
+}
+
+.hero .hero-text {
+  margin: auto;
+  text-align: right;
+  color: var(--main-text);
+  direction: rtl;
+}
+
+.hero .hero-text h1 {
+  font-size: 49px;
+  margin-bottom: 20px;
+}
+
+.hero .hero-text p {
+  font-size: 27px;
+  font-family: "amiri";
+  color: var(--second-color);
+  margin-bottom: 60px;
+}
+
+.hero .hero-text .btn {
+  background-color: var(--hover-color);
+  color: #ffff;
+  font-size: 34px;
+  padding: 7px 25px;
+  border-radius: 8px;
+  border: none;
+  font-family: "cairo";
+  cursor: pointer;
+
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.hero .hero-text .btn:hover {
+  background-color: var(--main-color);
+}
+
+.hero .hero-img {
+  display: grid;
+}
+
+.hero .hero-img img {
+  margin: auto;
+  width: 90%;
+}
+
+/* Advantages */
+
+.why {
+  width: 90%;
+  margin: auto;
+}
+
+.why img {
+  width: 100%;
+  margin: 50px 0 100px;
+}
+
+/* ======================= */
+/* Best Offer */
+
+.best-offer {
+  width: 90%;
+  margin: auto;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  direction: rtl;
+  margin-bottom: 100px;
+  margin-top: 50px;
+  position: relative;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 4px;
+  background-color: #d8d8d8;
+  bottom: -15px;
+  border-radius: 8px;
+}
+
+.title::after {
+  content: "";
+  width: 100px;
+  height: 7px;
+  position: absolute;
+  bottom: -16px;
+  background-color: #007bff;
+  border-radius: 3px;
+}
+
+.title .icon {
+  margin-left: 10px;
+  color: var(--main-text);
+  font-size: 35px;
+}
+
+.title .text {
+  color: var(--main-text);
+  font-size: 35px;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 88%;
+  margin: auto;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.card {
+  min-width: 200px;
+  min-height: 330px;
+  margin: 10px;
+  padding: 10px;
+  text-align: right;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  direction: rtl;
+  margin-bottom: 120px;
+}
+
+.card h3 {
+  padding: 10px;
+  font-size: 14px;
+  font-family: "amiri";
+  color: var(--second-color);
+}
+
+.card a {
+  display: flex;
+  justify-content: center;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 20px;
+  font-size: 16px;
+  font-family: "cairo";
+  cursor: pointer;
+  /*  دول علشان امنع تحديدالتكست داخل العنصر */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.card a:hover {
+  background-color: var(--hover-color);
+}
+
+.card img {
+  background-color: var(--main-text);
+  width: 100%;
+  height: 150px;
+  border-radius: 5px 5px 50px 0px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.card .img-card {
+  background-color: var(--main-text);
+  width: 100%;
+  height: 150px;
+  border-radius: 5px 5px 50px 0px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--hover-color);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+button.prev {
+  left: 0px;
+}
+
+button.next {
+  right: 0px;
+}
+
+button.prev:hover,
+button.next:hover {
+  background-color: var(--main-color);
+}
+/* ======================= */
+/* Products */
+
+.new-pro {
+  width: 90%;
+  margin: auto;
+}
+
+.pro-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  direction: rtl;
+}
+
+.pro-container .content {
+  max-width: 270px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 70px;
+  padding: 7px 7px 15px 7px;
+}
+
+.pro-container .content .img-part {
+  width: 100%;
+}
+
+.pro-container .content .img-part img {
+  width: 100%;
+  border-radius: 5px 5px 50px 0px;
+}
+
+.pro-container .content p {
+  padding: 15px;
+  font-family: "amiri";
+  color: var(--second-color);
+  font-size: 15px;
+}
+
+.pro-container .content a {
+  color: #fff;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  padding: 5px 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.content a:hover {
+  background-color: var(--hover-color);
+}
+
+/* ======================= */
+/* Contant Us */
+
+.contact {
+  width: 100%;
+  margin: 70px auto;
+}
+
+.contact .contact-icon {
+  background-color: #e3f2fd;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.contact-icon .icons a {
+  font-size: 30px;
+  padding-right: 15px;
+}
+
+.contact-icon .icons,
+.contact-icon .whatsapp {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 30px;
+}
+.contact-icon .whatsapp a {
+  padding-right: 10px;
+  color: var(--main-text);
+}
+
+.contact .contact-icon i {
+  color: var(--main-color);
+}
+
+.contact .contact-icon i:hover,
+.contact-icon .whatsapp a:hover {
+  color: var(--hover-color);
+}
+
+/* ==================== */
+/* Footer */
+
+footer {
+  width: 100%;
+  background-color: #2f69a7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+  direction: rtl;
+}
+
+footer div p {
+  color: #fff;
+  font-size: 20px;
+}
+
+footer div p a {
+  color: #00ff3c;
+}
+
+footer div p a:hover {
+  color: #b30127;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  /* nav bar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+    align-items: center;
+  }
+
+  nav .search {
+    display: none;
+  }
+
+  nav .menu-icon {
+    display: block;
+    padding-right: 15px;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  /* hero section */
+
+  .hero {
+    display: block;
+    padding-top: 20px;
+  }
+
+  .hero .hero-img {
+    padding-top: 20px;
+  }
+
+  .hero .hero-text h1 {
+    padding: 25px 0 0;
+    font-size: 42px;
+    margin-bottom: 20px;
+  }
+
+  .hero .hero-text p {
+    font-size: 25px;
+  }
+
+  .hero .hero-text .btn {
+    font-size: 25px;
+  }
+
+  /* Why Us */
+
+  .why {
+    padding-top: 100px;
+  }
+  
+
+  /* Best Offer */
+
+  .title {
+    margin-top: 0px;
+  }
+}
