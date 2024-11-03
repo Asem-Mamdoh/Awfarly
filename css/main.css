@@ -51,6 +51,7 @@ nav ul {
   justify-content: space-evenly;
   list-style: none;
   align-items: center;
+  
 }
 
 nav ul li {
@@ -96,22 +97,81 @@ nav input {
   color: var(--main-text);
 }
 
-.drop-list {
-  display: flex;
-  flex-flow: column wrap;
-  border-radius: 8px;
-  text-align: end;
-}
-.drop-list li {
+.drop {
   display: none;
-  border-bottom: 4px solid var(--main-color);
-  border-radius: 8px;
-  width: 100%;
+  position: absolute;
+  top: 60px;
+  border: 1px solid #ccc;
+  background: linear-gradient(to bottom, #f0f0f0, #fff);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  z-index: 1;
 }
 
-.drop-list li:hover {
-  background-color: #00ff3c;
+.drop .show{
+  display: block;
 }
+.drop .ul-drop {
+  display: block;
+  text-align: center;
+}
+
+.drop .ul-drop li {
+  font-family: "amiri", sans-serif;
+  padding: 15px 20px;
+}
+
+
+.drop .ul-drop li:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.035);
+  transition: all 0.3s ease-in-out;
+}
+
+/* ===================== */
+/* Scroll To Top */
+
+
+#scroll-up {
+    position: fixed;
+    z-index: 100;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 50%;
+    border: 1px solid #007bff;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    display: none;
+    animation-name: up;
+    animation-duration: 2s;
+    animation-delay: 0.5;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroll-up i {
+  color: #ffffff;
+  font-size: 25px;
+}
+
+@keyframes up {
+  0% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 50;
+    scale: 1.15;
+  }
+
+  100% {
+    translate: 0 0;
+  }
+}
+
 
 /* ======================= */
 /* Heroo Section */
@@ -122,7 +182,7 @@ nav input {
   padding-top: 30px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 10px;
   height: 90vh;
 }
 
@@ -338,6 +398,7 @@ button.next:hover {
 .new-pro {
   width: 90%;
   margin: auto;
+  padding: 20px 0px;
 }
 
 .pro-container {
@@ -513,7 +574,6 @@ footer div p a:hover {
   .why {
     padding-top: 100px;
   }
-  
 
   /* Best Offer */
 

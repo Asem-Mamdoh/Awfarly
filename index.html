@@ -25,27 +25,29 @@
 
   <body>
     <!-- Nav Bar -->
-    <header>
+    <header id="top">
       <nav>
         <img class="logo" src="pic/logo.svg" alt="logo" />
 
         <!-- options -->
         <ul>
           <li><a href="#">الرئيسية</a></li>
-          <li><a href="#">أفضل العروض</a></li>
-          <li><a href="#">المنتجات الجديدة</a></li>
+          <li><a href="#best-offer">أفضل العروض</a></li>
+          <li><a href="#new-pro">المنتجات الجديدة</a></li>
           <li id="mainDrop">
-            <a href="#">الأقسام</a>
-            <ul class="drop-list" id="dropList">
-              <li><a href="#">أحذية</a></li>
-              <li><a href="#">ملابس رجالي</a></li>
-              <li><a href="#">ملابس حريمي</a></li>
-              <li><a href="#">اكسسوارات</a></li>
-              <li><a href="#">أجهزةالكترونية</a></li>
-              <li><a href="#">أدوات كهربائية </a></li>
-              <li><a href="#">هواتف</a></li>
-              <li><a href="#">ساعات</a></li>
-            </ul>
+            <a href="#" id="">الأقسام</a>
+            <div class="drop" id="drop">
+              <ul class="ul-drop" id="dropList">
+                <li><a href="#">أحذية</a></li>
+                <li><a href="#">ملابس رجالي</a></li>
+                <li><a href="#">ملابس حريمي</a></li>
+                <li><a href="#">اكسسوارات</a></li>
+                <li><a href="#">أجهزةالكترونية</a></li>
+                <li><a href="#">أدوات كهربائية </a></li>
+                <li><a href="#">هواتف</a></li>
+                <li><a href="#">ساعات</a></li>
+              </ul>
+            </div>
           </li>
         </ul>
 
@@ -59,6 +61,7 @@
 
         <h3 class="menu-icon"><i class="fa-solid fa-bars"></i></h3>
       </nav>
+      <button id="scroll-up"><i class="fa-solid fa-chevron-up"></i></button>
     </header>
 
     <!-- Hero Section -->
@@ -288,7 +291,7 @@
 
     <!-- New Product -->
 
-    <section class="new-pro">
+    <section class="new-pro" id="new-pro">
       <div class="title">
         <h1 class="icon"><i class="fa-solid fa-shop"></i></h1>
         <h1 class="text">المنتجات الجديدة</h1>
@@ -650,11 +653,19 @@
         </div>
 
         <div class="whatsapp">
-          <a href="#"><i class="fa-solid fa-phone"></i></a>
           <a
             href="https://wa.me/201092403148?text=مرحبًا، أريد الاستفسار عن منتجكم.
           "
-            >+201092403148</a
+            target="_blank"
+            rel="noopener"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+          <a
+            href="https://wa.me/201092403148?text=مرحبًا، أريد الاستفسار عن منتجكم.
+          "
+            target="_blank"
+            rel="noopener"
+            >Whatsapp</a
           >
         </div>
       </div>
@@ -667,7 +678,15 @@
         <p>"حقوق الطبع والنشر © 2024 لــ أوفرلي , جميع الحقوق محفوظة"</p>
       </div>
       <div>
-        <p>تم تصميم الموقع وبرمجته عن طريق : <a href="#">عاصم ممدوح</a></p>
+        <p>
+          تم تصميم الموقع وبرمجته عن طريق :
+          <a
+            href="https://www.facebook.com/Elza3im.asem"
+            target="_blank"
+            rel="noopener"
+            >عاصم ممدوح</a
+          >
+        </p>
       </div>
     </footer>
     <script src="js/main.js"></script>

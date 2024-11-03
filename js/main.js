@@ -1,16 +1,31 @@
-let slider = document.querySelector('.slider');
-let nextBtn = document.querySelector('.next');
-let prevBtn = document.querySelector('.prev');
+let slider = document.querySelector(".slider");
+let nextBtn = document.querySelector(".next");
+let prevBtn = document.querySelector(".prev");
 
+let mainDrop = document.getElementById("mainDrop");
+let drop = document.getElementById("drop");
+let isDropdownOpen = false; //انا عملت ده علشان اتحكم في العنصر
+
+// دالة  لفتح القائمة
+mainDrop.addEventListener("click", () => {
+  isDropdownOpen = !isDropdownOpen;
+  if (isDropdownOpen) {
+    drop.style.display = "block";
+  } else {
+    drop.style.display = "none";
+  }
+});
+
+// افضل العروض
 let currentIndex = 0;
 let cardWidth = 220; // عرض الكارت + المسافة بين الكروت
 
-nextBtn.addEventListener('click', () => {
-  currentIndex ++;
+nextBtn.addEventListener("click", () => {
+  currentIndex++;
   updateSliderPosition();
 });
 
-prevBtn.addEventListener('click', () => {
+prevBtn.addEventListener("click", () => {
   currentIndex--;
   updateSliderPosition();
 });
@@ -23,19 +38,22 @@ function updateSliderPosition() {
 function checkButtons() {
   // منع الضغط على الزر عندما نصل إلى نهاية الكروت
   prevBtn.disabled = currentIndex === 0;
-  nextBtn.disabled = currentIndex >= slider.children.length -1;
+  nextBtn.disabled = currentIndex >= slider.children.length - 1;
 }
 
 checkButtons();
 
-let dropList = document.getElementById("dropList");
-let mainDrop = document.getElementById("mainDrop")
+// زرار الاسكرول
+let scrollUp = document.getElementById("scroll-up");
 
-mainDrop.addEventListener("click", function(){
-  dropList.style.display = "block";
+onscroll = function () {
+  if (this.scrollY >= 250) {
+    scrollUp.style.display = "block";
+  } else {
+    scrollUp.style.display = "none";
+  }
+};
 
-  
-})
-
-console.log(dropList);
-
+scrollUp.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
