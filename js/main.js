@@ -16,6 +16,22 @@ mainDrop.addEventListener("click", () => {
   }
 });
 
+let menuIcon = document.getElementById("menu-icon");
+let dropMenu = document.getElementById("drop-menu");
+let listMenu = document.getElementById("list-menu");
+
+menuIcon.addEventListener("click", ()=>{
+  isDropdownOpen = !isDropdownOpen;
+  if (isDropdownOpen) {
+    menuIcon.style.color = "#007bff"
+    dropMenu.style.display = "block";
+  } else {
+    menuIcon.style.color = "#333333"
+    dropMenu.style.display = "none";
+  }
+})
+
+
 // افضل العروض
 let currentIndex = 0;
 let cardWidth = 220; // عرض الكارت + المسافة بين الكروت
