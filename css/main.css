@@ -51,7 +51,6 @@ nav ul {
   justify-content: space-evenly;
   list-style: none;
   align-items: center;
-  
 }
 
 nav ul li {
@@ -118,37 +117,33 @@ nav input {
   padding: 15px 20px;
 }
 
-
 .drop .ul-drop li:hover {
   background-color: #e0e0e0;
   transform: scale(1.035);
   transition: all 0.3s ease-in-out;
 }
 
-
-
 /* ===================== */
 /* Scroll To Top */
 
-
 #scroll-up {
-    position: fixed;
-    z-index: 100;
-    bottom: 20px;
-    right: 20px;
-    background-color: #007bff;
-    color: #ffffff;
-    border-radius: 50%;
-    border: 1px solid #007bff;
-    width: 45px;
-    height: 45px;
-    cursor: pointer;
-    display: none;
-    animation-name: up;
-    animation-duration: 2s;
-    animation-delay: 0.5;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+  position: fixed;
+  z-index: 100;
+  bottom: 60px;
+  right: 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  border-radius: 50%;
+  border: 1px solid #007bff;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  display: none;
+  animation-name: up;
+  animation-duration: 2s;
+  animation-delay: 0.5;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 #scroll-up i {
@@ -170,7 +165,6 @@ nav input {
     translate: 0 0;
   }
 }
-
 
 /* ======================= */
 /* Heroo Section */
@@ -306,6 +300,9 @@ nav input {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-width: 200px;
   min-height: 330px;
   margin: 10px;
@@ -325,8 +322,6 @@ nav input {
 }
 
 .card a {
-  display: flex;
-  justify-content: center;
   background-color: var(--main-color);
   color: #fff;
   border-radius: 5px;
@@ -345,10 +340,9 @@ nav input {
   background-color: var(--hover-color);
 }
 
-.card img {
-  background-color: var(--main-text);
+.img-card {
   width: 100%;
-  height: 150px;
+  min-height: 140px;
   border-radius: 5px 5px 50px 0px;
   background-position: center;
   background-repeat: no-repeat;
@@ -356,8 +350,7 @@ nav input {
   overflow: hidden;
 }
 
-.card .img-card {
-  background-color: var(--main-text);
+.card img {
   width: 100%;
   height: 150px;
   border-radius: 5px 5px 50px 0px;
@@ -401,39 +394,46 @@ button.next:hover {
 }
 
 .pro-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   direction: rtl;
+  gap: 30px;
 }
 
-.pro-container .content {
-  max-width: 270px;
-  overflow: hidden;
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 200px;
+  min-height: 350px;
+  padding: 20px;
+  text-align: right;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  margin-bottom: 70px;
-  padding: 7px 7px 15px 7px;
+  border-radius: 5px;
+  margin-bottom: 50px;
 }
 
-.pro-container .content .img-part {
+.content .img-part {
   width: 100%;
+  overflow: hidden;
 }
 
-.pro-container .content .img-part img {
+.content .img-part img {
   width: 100%;
+  height: 160px;
   border-radius: 5px 5px 50px 0px;
 }
 
-.pro-container .content p {
-  padding: 15px;
+.content p {
+  padding: 10px;
+  padding-bottom: 20px;
   font-family: "amiri";
   color: var(--second-color);
   font-size: 15px;
+
 }
 
-.pro-container .content a {
+.content a {
   color: #fff;
   background-color: var(--main-color);
   border-radius: 5px;
@@ -521,10 +521,9 @@ footer div p a:hover {
   color: #b30127;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 610px) {
   /* nav bar */
   nav {
-    display: flex;
     justify-content: space-between;
     padding-top: 15px;
     align-items: center;
@@ -543,8 +542,7 @@ footer div p a:hover {
     display: none;
   }
 
-
-  .drop-menu{
+  .drop-menu {
     display: none;
     position: absolute;
     top: 70px;
@@ -555,19 +553,18 @@ footer div p a:hover {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     z-index: 1;
-    
   }
-  
+
   .list-drop {
     display: block;
     text-align: center;
   }
-  
+
   .list-drop li {
     font-family: "amiri", sans-serif;
     padding: 15px 20px;
   }
-  
+
   .list-drop li:hover {
     background-color: #e0e0e0;
     transform: scale(1.035);
@@ -599,11 +596,11 @@ footer div p a:hover {
   .hero .hero-text .btn {
     font-size: 25px;
   }
-/* =============== */
+  /* =============== */
   /* Why Us */
 
   .why {
-    padding-top: 100px;
+    padding-top: 40%;
   }
 
   /* =================== */
@@ -611,7 +608,5 @@ footer div p a:hover {
 
   .title {
     margin-top: 0px;
-    
   }
 }
-
